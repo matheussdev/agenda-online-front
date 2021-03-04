@@ -1,0 +1,100 @@
+.nav-bar-top ul {
+  width: 100%;
+  list-style: none;
+  padding: 3rem;
+}
+.icon-close{
+  color: white;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 0 2rem;
+}
+.nav-bar-top {
+  /* background-image: ; */
+  background: linear-gradient(
+      0deg,
+      rgba(9, 9, 121, 0.747) 10%,
+      rgba(85, 74, 153, 0.781) 53%
+    ),
+    url("../../assets/images/backnav.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100%;
+  -webkit-box-shadow: 7px 0px 44px -23px rgba(0, 0, 0, 0.38);
+  -moz-box-shadow: 7px 0px 44px -23px rgba(0, 0, 0, 0.38);
+  box-shadow: 7px 0px 44px -23px rgba(0, 0, 0, 0.38);
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+}
+.top-bar-mobile{
+  background: linear-gradient(
+      0deg,
+      rgba(9, 9, 121, 0.747) 10%,
+      rgba(85, 74, 153, 0.781) 53%
+    ),
+    url("../../assets/images/backnav.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  position: fixed;
+  width: 100%;
+  z-index: 99999;
+}
+.iconMenu{
+  font-size: 3rem;
+  cursor: pointer;
+}
+#menuIconTop{
+  pointer-events: none;
+}
+.logoIcon{
+  font-size: 6rem;
+}
+
+.logoName{
+  color: white;
+  font-size: 2rem;
+}
+.nav-bar-top ul li {
+  width: 100%;
+  list-style: none;
+  font-size: 2rem;
+  color: white;
+  margin: 1.2rem 0;
+  display: flex;
+}
+.nav-bar-top ul li a {
+  width: 100%;
+  list-style: none;
+  font-size: 2rem;
+  color: white;
+  padding: 1rem 1rem;
+  text-decoration: none;
+}
+
+.nav-bar-top ul li a#link-select {
+  background-color: white;
+  color: #544A99;
+}
+.iconMenuHide{
+  display: none;
+}
+
+@media(min-width: 780px) {
+.nav-bar-top{
+  display: none;
+}
+.top-bar-mobile{
+  display: none !important;
+}
+}

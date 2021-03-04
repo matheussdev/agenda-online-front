@@ -1,6 +1,6 @@
 body {
   height: 100vh;
-  background: #F2F2F2;
+  background: #f2f2f2;
 }
 
 .screen-full {
@@ -10,12 +10,16 @@ body {
 }
 
 .nav-bar {
-  background: rgb(9, 9, 121);
+  /* background-image: ; */
   background: linear-gradient(
-    0deg,
-    rgba(9, 9, 121, 1) 10%,
-    rgba(84, 74, 153, 1) 53%
-  );
+      0deg,
+      rgba(9, 9, 121, 0.747) 10%,
+      rgba(85, 74, 153, 0.781) 53%
+    ),
+    url("../../assets/images/backnav.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   width: 20vw;
   height: 100vh;
   -webkit-box-shadow: 7px 0px 44px -23px rgba(0, 0, 0, 0.38);
@@ -33,12 +37,11 @@ body {
   height: 100vh;
   display: flex;
   flex-direction: column;
-justify-content: center;
-background: #F2F2F2;
-
+  justify-content: center;
+  background: #f2f2f2;
 }
-.viseble-section h1{
-    margin-bottom: 2rem;
+.viseble-section h1 {
+  margin-bottom: 2rem;
 }
 
 .cards-menu-top {
@@ -47,21 +50,47 @@ background: #F2F2F2;
   grid-template-columns: 1fr 0.5fr;
 }
 .cards-menu-down {
-    margin-top: 3rem;
-    display: grid;
-    gap: 3rem;
-    grid-template-columns: 1fr 1fr 1fr;
-  }
+  margin-top: 3rem;
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: 1fr 1fr 1fr;
+}
 .card-menu {
-    -webkit-box-shadow: 7px 0px 57px 3px rgba(0,0,0,1);
-    -moz-box-shadow: 7px 0px 57px 3px rgba(0,0,0,1);
-    box-shadow: 0px 1px 6px 0px rgba(0,0,0,0.3);
-
-    border-radius: 1rem;
-    height: 30vh;
+  -webkit-box-shadow: 7px 0px 57px 3px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 7px 0px 57px 3px rgba(0, 0, 0, 1);
+  box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.3);
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 2rem;
+  align-items: flex-start;
+  border-radius: 1rem;
+  height: 30vh;
 }
 
-.copyright{
-    color:     rgba(84, 74, 153, 0.3);
-    margin: 30px auto 0;
+.copyright {
+  color: rgba(84, 74, 153, 0.3);
+  margin: 30px auto 0;
+}
+
+@media (max-width: 780px) {
+  .viseble-section {
+    margin-top: 7rem;
+    width: 100vw !important;
+    padding: 2rem;
+    height: 100% !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #f2f2f2;
+  }
+  .cards-menu-top {
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: 1fr;
+  }
+  .cards-menu-down {
+    grid-template-columns: 1fr ;
+  }
 }

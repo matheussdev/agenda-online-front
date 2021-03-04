@@ -1,0 +1,40 @@
+.nav-bar ul {
+  width: 100%;
+  list-style: none;
+  padding: 3rem;
+}
+.logoIcon{
+  font-size: 6rem;
+}
+
+.logoName{
+  color: white;
+  font-size: 2rem;
+}
+.nav-bar ul li {
+  width: 100%;
+  list-style: none;
+  font-size: 2rem;
+  color: white;
+  margin: 1.2rem 0;
+  display: flex;
+}
+.nav-bar ul li a {
+  width: 100%;
+  list-style: none;
+  font-size: 2rem;
+  color: white;
+  padding: 1rem 1rem;
+  text-decoration: none;
+}
+
+.nav-bar ul li a#link-select {
+  background-color: white;
+  color: #544A99;
+}
+
+@media(max-width: 780px) {
+.nav-bar{
+  display: none !important;
+}
+}

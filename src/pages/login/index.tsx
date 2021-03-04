@@ -2,6 +2,7 @@ import React from "react";
 import "./style.css";
 
 import api from "../../services/api";
+import { Link } from "react-router-dom";
 
 export interface LoginProps {}
 
@@ -40,8 +41,8 @@ class Login extends React.Component<LoginProps, LoginState> {
         console.log(api.defaults.headers.authorization);
         window.location.replace("/admin");
       })
-      .catch((err) => {
-        console.error(err);
+      .catch((res) => {
+        console.log(res);
       });
   }
 
@@ -81,6 +82,8 @@ class Login extends React.Component<LoginProps, LoginState> {
               Logar
             </button>
           </form>
+          <Link to="/register">Criar conta</Link>
+
         </div>
       </section>
     );

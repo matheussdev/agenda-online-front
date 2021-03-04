@@ -1,0 +1,82 @@
+#list-all-services li{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  list-style: none;
+  border-bottom: 1px solid rgba(136, 136, 136, 0.315);
+  margin-bottom: 3rem;
+}
+#list-all-services li .divadjust{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+  list-style: none;
+
+}
+#list-all-services li .control-card-service{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#list-all-services li .control-card-service button.primary{
+  padding: 0.5rem 3rem;
+  border-radius: 1.25rem;
+  background: rgb(9, 9, 121);
+  background: rgba(84, 74, 153, 1);
+  border: none;
+  color: #F2F2F2;
+  transition: all 0.4s ease-in-out;
+}
+#list-all-services li .control-card-service button.danger{
+  padding: 0.5rem 3rem;
+  border-radius: 1.25rem;
+  background-color: red;
+  border: none;
+  color: #F2F2F2;
+  transition: all 0.4s ease-in-out;
+  margin: 1rem 0;
+}
+#list-all-services li .control-card-service button:hover.primary{
+  /* padding: 0.5rem 3.2rem; */
+  border-radius: 1.35rem;
+  background:rgba(9, 9, 121, 1);
+  border: none;
+  color: #F2F2F2;
+}
+
+#list-all-services li .info-service{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+#list-all-services li .info-service .resp{
+  font-weight: 300;
+  margin-left: 1rem;
+}
+
+@media (max-width: 780px) {
+  #list-all-services li{
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+    justify-content: space-between;
+    list-style: none;
+    border-bottom: 1px solid rgba(136, 136, 136, 0.315);
+    margin-bottom: 3rem;
+    overflow-x: hidden;
+    flex-wrap: wrap;
+  }
+  #list-all-services li .control-card-service button{
+    padding: 0.5rem 3rem;
+    border-radius: 1.25rem;
+    background: rgb(9, 9, 121);
+    background: rgba(84, 74, 153, 1);
+    border: none;
+    color: #F2F2F2;
+    transition: all 0.4s ease-in-out;
+    margin-bottom: 1rem;
+  }
+}

@@ -1,8 +1,10 @@
 import {
+  faBars,
   faCalendarAlt,
   faHome,
   faSignOutAlt,
   faTasks,
+  faTimes,
   faUserCog,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -11,18 +13,40 @@ import { Link } from "react-router-dom";
 
 import "./style.css";
 
-export interface NavBarProps {}
+export interface NavBarTopProps {}
 
-export interface NavBarState {}
+export interface NavBarTopState {}
 
-class NavBar extends React.Component<NavBarProps, NavBarState> {
+class NavBarTop extends React.Component<NavBarTopProps, NavBarTopState> {
   _logOut() {
     localStorage.setItem("token", "");
     window.location.replace("/login");
   }
+  showMenu(evento:any){
+    console.log(evento.target.classList)
+    evento.target.classList.value='iconMenuHide'
+    const menu:any = document.querySelector('.nav-bar-top')
+    menu.style.display = "flex";
+  }
+  closeMenu(evento:any){
+    const menu:any = document.querySelector('.nav-bar-top')
+    const menuicon:any = document.querySelector('.iconMenuHide')
+    menu.style.display = "none";
+    console.log(menuicon.clasList)
+    menuicon.classList.value='iconMenu'
+    
+  }
   render() {
     return (
-      <nav className="nav-bar">
+      <div>
+      <div className="top-bar-mobile">
+        <h2>📅 Agenda online</h2>
+        <h2 className="iconMenu"  onClick={this.showMenu.bind(this)} >
+          <span id="menuIconTop"> <FontAwesomeIcon icon={faBars} /></span>
+        </h2>
+      </div>
+      <nav className="nav-bar-top">
+        <h1 className="icon-close"> <span onClick={this.closeMenu.bind(this)}><FontAwesomeIcon icon={faTimes}/></span></h1>
         <h1 className="logoIcon">📅</h1>
         <p className="logoName">Agenda Online</p>
         <ul>
@@ -53,8 +77,9 @@ class NavBar extends React.Component<NavBarProps, NavBarState> {
           </li>
         </ul>
       </nav>
+      </div>
     );
   }
 }
 
-export default NavBar;
+export default NavBarTop;

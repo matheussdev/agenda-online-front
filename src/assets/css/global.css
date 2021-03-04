@@ -21,22 +21,22 @@
 
 body{
     height: 100%;
-    background: rgb(9, 9, 121);
+    /* background: rgb(9, 9, 121);
     background: linear-gradient(
       0deg,
       rgba(9, 9, 121, 1) 10%,
       rgba(84, 74, 153, 1) 53%
-    );
+    ); */
 }
 
 html
 {
-  background: rgb(9, 9, 121);
+  /* background: rgb(9, 9, 121);
   background: linear-gradient(
     0deg,
     rgba(9, 9, 121, 1) 10%,
     rgba(84, 74, 153, 1) 53%
-  );
+  ); */
 }
 #root{
     display: flex;
